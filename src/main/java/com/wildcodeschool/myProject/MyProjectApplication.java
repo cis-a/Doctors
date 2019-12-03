@@ -10,11 +10,17 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @SpringBootApplication
 public class MyProjectApplication {
 
-//@RequestMapping("/")
-//@ResponseBody
-//public String index () {
-//	return "List of Doctors Who" ;
-//}
+@RequestMapping("/")
+@ResponseBody
+public String index () {
+return "<h1>Hello, I'm the Doctor!</h1>"
+	+ "<ul>"
+	+	"<li><a href=/doctor/1>Doctor  1</a></li>"
+	+	"<li><a href=/doctor/3>Doctor  3</a></li>"
+	+	"<li><a href=/doctor/5>Doctor  5</a></li>"
+	+	"<li><a href=/doctor/13>Doctor 13</a></li>"
+	+ "</ul>";
+}
 
 @RequestMapping("/doctor/1")
 @ResponseBody
